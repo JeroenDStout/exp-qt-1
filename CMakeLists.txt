@@ -33,6 +33,7 @@ include(cmake/sources.cmake)
 # Subprojects
 #
 
+add_subdirectory(src/timetron)
 add_subdirectory(src/version)
 
 message(STATUS "")
