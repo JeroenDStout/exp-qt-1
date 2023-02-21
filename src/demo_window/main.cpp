@@ -1,4 +1,12 @@
-int main()
+#include "demo_window/window.h"
+
+#include <QtWidgets/QApplication>
+
+
+int main(int argc, char *argv[])
 {
-    return 0;
+    QApplication a(argc, argv);
+    gaos::qt_demo::demo_window w;
+    w.show();
+    return a.exec();
 }
