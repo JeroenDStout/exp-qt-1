@@ -145,7 +145,7 @@ function(configure_project_executable project_ref)
   print_all_project_sources()
   
   add_executable(${project_ref} ${${project_source_list}})
-  target_include_directories(${project_ref} PRIVATE ${abs_src} ${abs_gen} ${project_root_dir}/src ${CMAKE_BINARY_DIR}/gen/src)
+  target_include_directories(${project_ref} PRIVATE ${abs_src} ${abs_gen} ${project_root_dir}/src ${CMAKE_BINARY_DIR}/gen/src ${CMAKE_BINARY_DIR}/src)
   target_include_directories(${project_ref} PRIVATE ${abs_src} ${abs_gen})
   
   add_custom_command(
