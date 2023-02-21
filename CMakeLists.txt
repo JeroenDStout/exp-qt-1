@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-project(Core)
+project(demo_window)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
@@ -34,7 +34,7 @@ include(cmake/qt.cmake)
 # Subprojects
 #
 
-add_subdirectory(src/timetron)
+add_subdirectory(src/demo_window)
 add_subdirectory(src/version)
 
 message(STATUS "")
