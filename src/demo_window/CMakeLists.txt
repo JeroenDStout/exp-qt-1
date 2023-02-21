@@ -15,6 +15,7 @@ setup_project_source(demo_window "window"
 )
 setup_project_source_qt_ui(demo_window "window"
   window.ui
+  version.ui
 )
 
 # Target
