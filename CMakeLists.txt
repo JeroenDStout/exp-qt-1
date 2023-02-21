@@ -16,6 +16,7 @@ include(cmake/python.cmake)
 include(cmake/get_cpm.cmake)
 include(cmake/artefacts.cmake)
 include(cmake/sources.cmake)
+include(cmake/qt.cmake)
 
 #
 # Base config
