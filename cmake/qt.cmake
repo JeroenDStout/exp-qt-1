@@ -12,8 +12,11 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 macro(setup_project_source_qt_ui project_ref project_source_group)
   message(STATUS "Wrap Qt UI for ${project_ref}/${project_source_group}")
-  qt6_wrap_ui(${ARGN})
+  qt6_wrap_ui(out_var ${ARGN})
   setup_project_source(${project_ref} ${project_source_group} ${ARGN})
+  
+  set_project_source_list(${project_ref})
+  setup_project_source_external_generated(${project_ref} ${project_source_group} ${out_var})
 endmacro()
 
 #

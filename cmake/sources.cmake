@@ -114,6 +114,15 @@ macro(setup_project_source_specific project_ref project_source_group generated)
 endmacro()
 
 
+macro(setup_project_source_external_generated project_ref project_source_group)
+  set_project_source_list(${project_ref})
+  
+  set_source_files_properties(${ARGN} PROPERTIES GENERATED ON)
+  source_group(${project_source_group}/generated FILES ${ARGN})
+  list(APPEND ${project_source_list} ${ARGN})
+endmacro()
+
+
 macro(print_all_project_sources)
   foreach(var IN LISTS ${project_source_list})
     file(RELATIVE_PATH rel ${project_root_dir} ${var})

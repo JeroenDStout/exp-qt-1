@@ -9,7 +9,11 @@ setup_project_source(demo_window "core"
   window.cpp
   window.h
 )
-setup_project_source_qt_ui(demo_window "core"
+setup_project_source(demo_window "window"
+  window.cpp
+  window.h
+)
+setup_project_source_qt_ui(demo_window "window"
   window.ui
 )
 
