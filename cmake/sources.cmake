@@ -175,3 +175,14 @@ function(configure_project_static_lib project_ref)
   target_include_directories(${project_ref} PRIVATE ${abs_src} ${abs_gen})
   install(TARGETS ${project_ref} DESTINATION ${project_root_dir}/bin)
 endfunction()
+
+
+#
+# Console
+#
+
+function(configure_project_console project_ref)
+  message(STATUS "Console is conditional for ${project_ref}")
+  
+  set_property(TARGET ${project_ref} PROPERTY WIN32_EXECUTABLE $<$<CONFIG:Release>:true>)
+endfunction()

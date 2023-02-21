@@ -16,7 +16,6 @@ macro(setup_project_source_qt_ui project_ref project_source_group)
   setup_project_source(${project_ref} ${project_source_group} ${ARGN})
 endmacro()
 
-
 #
 # Deploying
 #
