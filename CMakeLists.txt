@@ -5,6 +5,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 project(demo_window)
+include(cmake/project.cmake)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
